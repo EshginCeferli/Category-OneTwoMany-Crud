@@ -1,0 +1,65 @@
+﻿@model ProductCreateVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>@Model.Title</h1>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Online/Offline
+            </th>
+            <th style="text-align: center;">
+                Settings
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            <tr>
+                <td>
+                    @count
+                </td>
+                <td>
+                    @emp.FullName
+                </td>
+                <td>
+                    @emp.Age
+                </td>
+                <td>
+                    @emp.Position
+                </td>
+                <td>
+                    @if (emp.IsActive)
+                    {
+                        <img src="~/img/online.png" style="width: 30px !important; height: 30px !important " alt="online" />
+                    }
+                    else
+                    {
+
+                        <img src="~/img/offline.png" style="width: 40px !important; height: 30px !important" alt="offline" />
+                    }
+
+                </td>
+          
+            </tr>
+     
+
+
+    </tbody>
+</table>
